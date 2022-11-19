@@ -1,3 +1,4 @@
+<!--
 <?php
 if(isset($message)){
    foreach($message as $message){
@@ -9,7 +10,7 @@ if(isset($message)){
       ';
    }
 }
-?>
+?> -->
 <div class="header_top">
      <h3> - $5 FLAT RATE SHIPPING - Free Shipping Over $50  </h3>
    </div>
@@ -17,10 +18,14 @@ if(isset($message)){
    
    <section class="flex">
 
-     <a href="home.php" class="logo">
-         <img src="images/logo.png" alt="Cafe Shop 😋">
-      </a> 
+      <a href="home.php" class="logo">
+         <img src="images/logo.jpg" alt="Gadget shop">
+      </a>
+      <!-- scerch from -->
       
+      <a href="search.php"><i class="fas fa-search sea"></i></a>
+     
+
       <nav class="navbar">
          <a href="home.php">Home</a>
          <a href="about.php">About</a>
@@ -35,7 +40,7 @@ if(isset($message)){
             $count_cart_items->execute([$user_id]);
             $total_cart_items = $count_cart_items->rowCount();
          ?>
-         <a href="search.php"><i class="fas fa-search"></i></a>
+         
          <a href="cart.php"><i class="fas fa-shopping-cart"></i><span>(<?= $total_cart_items; ?>)</span></a>
          <div id="user-btn" class="fas fa-user"></div>
          <div id="menu-btn" class="fas fa-bars"></div>
@@ -70,4 +75,6 @@ if(isset($message)){
    </section>
 
 </header>
+
+
 

@@ -46,7 +46,7 @@ if(isset($_SESSION['user_id'])){
                 <img src="images/nisatmam.jpg" class="card-img" alt="...">
           
               <div class="doc">              
-                  <h3 class="title" >Our Ower</h3>
+                  <h3 class="title" >Our Owner</h3>
                   <br>
                   <p> <b>Nishat Tasnim Niloy</b></p>
                   <p > Lecturer, <br>  Department of Computer Science & Engineering 
@@ -57,7 +57,7 @@ if(isset($_SESSION['user_id'])){
                   <a href="https://www.linkedin.com/in/niloynishat/?originalSubdomain=bd" target="_blank" class="btn">Learn More</a>
               </div>
      
-        </section>
+</section>
 
 <!-- Our Team -->
 
@@ -75,7 +75,7 @@ if(isset($_SESSION['user_id'])){
          </div>
 
          <div class="box">
-            <img src="images/sifat.jpg" alt="">
+            <img class="sifat" src="images/sifat.jpg" alt="">
            
             <h2>Kazi Sifat Al Maksud</h2>
             <h3>ID: 2019-3-60-050</h3>
@@ -100,6 +100,7 @@ if(isset($_SESSION['user_id'])){
    </div>
 
 </section>
+-->
 
 <!-- about section starts  -->
 
@@ -108,7 +109,7 @@ if(isset($_SESSION['user_id'])){
    <div class="row">
 
       <div class="image">
-         <img src="images/about-card.jpg" alt="">
+       <img src="images/about-card.jpg" alt=""> 
       </div>
 
       <div class="content">

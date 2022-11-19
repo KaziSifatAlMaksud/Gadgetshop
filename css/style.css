@@ -1,10 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap');
+/*@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap');*/
+@import url('https://fonts.googleapis.com/css2?family=Aladin&display=swap');
 :root {
-   --yellow: black;
+   --button: #EB1484 - #C81CC5;
    --red: #e74c3c;
    --white: #fff;
    --black: #222;
    --light-color: #777;
+   --bg-color: #24252d;
+   --f-color: #2a2d3a;
+   --t-color: #fff;
+   --btn-color: linear-gradient(-60deg,  #EB1484 , #C81CC5);
    --border: .2rem solid var(--black);
 }
 
@@ -33,7 +38,7 @@
 }
 
 ::-webkit-scrollbar-thumb {
-   background-color: var(--yellow);
+   background-color: var(--button);
 }
 
 html {
@@ -41,7 +46,10 @@ html {
    overflow-x: hidden;
    scroll-behavior: smooth;
    stop-opacity: 7rem;
-   font-family:'Aboreto', cursive;
+   font-family: 'Aladin', cursive;
+   background-color: #24252d;
+   color: var(--white);
+   /*font-family:'Aboreto', cursive;*/
 }
 
 section {
@@ -54,7 +62,7 @@ section {
    text-align: center;
    margin-bottom: 2.5rem;
    font-size: 4rem;
-   color: var(--black);
+   color: var(--white);
    text-transform: uppercase;
    /*text-decoration: underline;*/
    text-underline-offset: 1rem;
@@ -66,7 +74,7 @@ section {
    gap: 1rem;
    flex-flow: column;
    padding-top: 50px;
-   background-color: var(--black);
+   background-color: #2D2E36;
    min-height: 20rem;
    border-bottom:2px solid black ;
    z-index: inherit;
@@ -93,13 +101,14 @@ section {
    color: aquamarine;
    
 }
-/*
 .logo img{
    position: absolute;
    margin: 0;
-   width: 20px;
-   height: 30px;
-}*/
+   margin-top: -19px;
+   width: 180px;
+   height: 40px;
+   border-radius: 10;
+}
 
 .btn,
 .delete-btn {
@@ -113,7 +122,8 @@ section {
 }
 
 .btn {
-   background-color: var(--yellow);
+   background: var(--btn-color);
+   border-radius: 5%;
    color: #fff;
 }
 
@@ -182,22 +192,25 @@ section {
    left: 0;
    right: 0;
    z-index: 1000;
-   background-color: var(--white);
+   width: 100%!important;
    border-bottom: .5px solid gray;
-   background-color: #fff; 
+   background-color: #2D2E36; 
+
    
 
 }
 .header_top{
    background-color: var(--black);
    width: 100%;   
+   letter-spacing: .3rem;
    height: 60px;
-   color: #fff;
+   color: var(--white);
    z-index: 10;
    
 }
 .header_top h3{
    width: 100%;
+   font-family: 'Anton', sans-serif;
    align-items: center;
    justify-content: center;
    padding-top: 20px;
@@ -214,32 +227,36 @@ section {
 
 
 .header .flex .navbar a {
-   font-size: 2rem;
-   color: var(--black);
+   font-size: 1.5rem;
+   color: var(--white);
    margin: 0 1rem;
+   
 }
 
 .header .flex .navbar a:hover {
    color: var(--yellow);
    text-decoration: underline;
 }
-.icons{
-   margin-right: -180px;
-}
-.header .flex .icons>* {
-   margin-left: 3rem;
-   font-size: 2.5rem;
 
-   color: var(--black);
+.header .sea{
+   margin-left: 2rem;
+   font-size: 1.5rem;
+   color: var(--white);
+   cursor: pointer;
+}
+.header .icons>* {
+   margin-left: 2rem;
+   font-size: 1.5rem;
+   color: var(--white);
    cursor: pointer;
 }
 
 .header .flex .icons>*:hover {
-   color: var(--yellow);
+   color: gray;
 }
 
 .header .flex .icons span {
-   font-size: 2rem;
+   font-size: 1.3rem;
 }
 
 #menu-btn {
@@ -264,15 +281,22 @@ section {
 }
 /* booking Area */
 .booking{
-   position: relative;
-   width: 200%;
+   width: 100%;
+   margin: 0;
    margin-bottom: 80px;
+   margin-left: 20%;
+   
    align-items: center;
-   padding: 30px 0 30px 80px;
-   background-color: 		#f5f5f5;
+   justify-content: center;
+   background-color:#f5f5f5;
    
 }
+.booking .title{
+   text-align: center;
+   justify-content: center;
+}
 .booking .bookinput{
+   text-align: center;
    align-items: center;
    display: flex;
    font-size: 2rem;
@@ -623,31 +647,25 @@ section {
    justify-content: center;
    align-items: center;
 
+
 }
 
 /* team in about page */
-.team{
-   position: relative;
-   width: 100%;
-   margin-left: 15%;
-   margin-top: 30px;
-   justify-content: center;
+
+.team .swiper-wrapper{
    align-items: center;
-}
-
-
-.team .box {
-   margin-bottom: 4rem;
+   justify-content: center;
    
-   padding-right: 2rem;
-   text-align: center;
 }
+
+
 
 .team .box img {
    height: 300px;
    width: 300px;
-   border-radius: 10%;
+  border-radius: 10%;
 }
+
 
 .team  h1{
       padding-left: 80px;
@@ -904,15 +922,17 @@ section {
 }
 
 .form-container form {
+   background-color: var(--f-color);
    margin: 0 auto;
    max-width: 50rem;
    padding: 2rem;
+   border-radius: 2%;
    text-align: center;
 }
 
 .form-container form h3 {
    font-size: 2.5rem;
-   color: var(--black);
+   color: var(--white);
    text-transform: uppercase;
    margin-bottom: 1rem;
 }
@@ -920,22 +940,23 @@ section {
 .form-container form .box {
    margin: .7rem 0;
    width: 100%;
-   border-bottom:2px solid black;
+   border-bottom:2px solid gray;
    padding: 1.4rem;
    font-size: 1.8rem;
-   color: var(--black);
-}
+   }
 
 .form-container form p {
    margin-top: 1.5rem;
    font-size: 2rem;
-   color: var(--light-color);
+   color: var(--white);
 }
 
 .form-container form p a {
-   color: var(--black);
+   color: gray;
 }
-
+.form-container form input{
+   background-color: var(--f-color);
+}
 .form-container form p a:hover {
    text-decoration: underline;
 }
@@ -1164,6 +1185,7 @@ hr{
    font-size: 1.3rem;
 }
 
+
 .credit {
    text-align: center;
    background-color: black;
@@ -1207,6 +1229,16 @@ hr{
    html {
       font-size: 55%;
    }
+    
+   .team .swiper-wrapper{
+      align-items: center;
+      width: 100%;
+      margin: 0;
+      justify-content: center;
+      display: flex;
+      flex-direction: column;
+   }
+
 
 }
 
@@ -1214,6 +1246,27 @@ hr{
 
    #menu-btn {
       display: inline-block;
+   }
+   .team{
+      display: flex;
+      flex-direction: column;
+   }
+   .footer{
+      height: 180vh;
+   }
+   
+   .team .swiper-wrapper{
+      align-items: center;
+      width: 100%;
+      margin: 0;
+      justify-content: space-between;
+     
+      display: flex;
+      flex-direction: column;
+   }
+   .footer .grid{
+      display: flex;
+      flex-direction: column;
    }
 
    .header .flex .navbar {
@@ -1227,6 +1280,10 @@ hr{
       transition: .2s linear;
       clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
    }
+   footer .grid .box .share{
+      align-items: center;
+      justify-content: center;
+   }
 
    .header .flex .navbar a {
       display: block;
@@ -1237,6 +1294,7 @@ hr{
    .header .flex .navbar.active {
       clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
    }
+
 
 }
 

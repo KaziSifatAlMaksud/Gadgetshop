@@ -9,11 +9,11 @@
          <a href="home.php"> Home </a>
          <a href="menu.php"> Menu </a>
          <a href="orders.php"> Order </a>
-         <a href="about"> About </a>
+         <a href="about.php"> About </a>
       </div>
 
       <div class="box">
-      <h3> groco <i class="fas fa-shopping-basket"></i> </h3>
+      <h3> Cofe Shop <i class="fas fa-shopping-basket"></i> </h3>
          <div class="share">
             <a href="#" class="fab fa-facebook-f"></a>
             <a href="#" class="fab fa-twitter"></a>
